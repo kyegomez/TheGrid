@@ -1,9 +1,9 @@
-<!-- <p align="center">
+<p align="center">
     <img src="https://i.imgur.com/7eR7Pan.png" width="400"><br>
-    Run large language models at home, BitTorrent-style.<br>
-    Fine-tuning and inference <a href="https://github.com/Agora-workshop/grid#benchmarks">up to 10x faster</a> than offloading<br><br>
+    Democratizing Superintelligence<br>
+    Fine-tuning and inference <a href="https://github.com/kyegomez/thegrid#benchmarks">up to 10x faster</a> than offloading<br><br>
     <a href="https://pypi.org/project/grid/"><img src="https://img.shields.io/pypi/v/grid.svg?color=green"></a><br>
-</p> -->
+</p>
 
 Generate text with distributed [LLaMA 2](https://ai.meta.com/llama/) ([70B](https://huggingface.co/meta-llama/Llama-2-70b-hf), [70B-Chat](https://huggingface.co/meta-llama/Llama-2-70b-chat-hf)), [LLaMA-65B](https://github.com/facebookresearch/llama/blob/llama_v1/MODEL_CARD.md), [Guanaco-65B](https://huggingface.co/timdettmers/guanaco-65b) or [BLOOM-176B](https://huggingface.co/Agora/bloom) and fine‑tune them for your own tasks &mdash; right from your desktop computer or Google Colab:
 
