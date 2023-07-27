@@ -1,6 +1,6 @@
 import dataclasses
 import platform
-from typing import Optional, Union
+from typing import Union
 
 import psutil
 import torch

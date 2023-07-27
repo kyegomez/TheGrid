@@ -205,7 +205,7 @@ class Server:
             try:
                 first_block_index, last_block_index = block_indices.split(":")
                 first_block_index, last_block_index = map(int, map(str.strip, (first_block_index, last_block_index)))
-            except Exception as e:
+            except Exception:
                 raise ValueError(f"Failed to parse `--block_indices {block_indices}`, must be start:end (e.g. 0:18)")
             block_indices = range(first_block_index, last_block_index)
             num_blocks = len(block_indices)
@@ -622,12 +622,12 @@ class ModuleContainer(threading.Thread):
         for handler in self.conn_handlers:
             handler.shutdown()
 
-        logger.debug(f"Shutting down pools")
+        logger.debug("Shutting down pools")
         for pool in self.runtime.pools:
             if pool.is_alive():
                 pool.shutdown()
 
-        logger.debug(f"Shutting down runtime")
+        logger.debug("Shutting down runtime")
         self.runtime.shutdown()
 
         logger.debug("Shutting down backends")

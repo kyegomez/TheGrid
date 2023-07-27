@@ -1,4 +1,3 @@
-from grid.models.llama.block import WrappedLlamaBlock
 from grid.models.llama.config import DistributedLlamaConfig
 from grid.models.llama.model import (
     DistributedLlamaForCausalLM,

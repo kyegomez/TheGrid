@@ -134,7 +134,7 @@ class RemoteGenerationMixin:
             num_return_sequences = 1
 
         assert num_return_sequences <= num_beams, (
-            f"You want more sequences than the beam has."
+            "You want more sequences than the beam has."
             " Check num_return_sequences: {num_return_sequences} and num_beams: {num_beams}."
         )
 

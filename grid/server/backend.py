@@ -204,7 +204,7 @@ def merge_inference_pools_inplace(backends: Dict[ExpertUID, TransformerBackend])
         _MergedInferenceStep(backends),
         max_batch_size=first_pool.max_batch_size,
         device=first_pool.device,
-        name=f"merged_inference",
+        name="merged_inference",
     )
     for backend in backends.values():
         assert not backend.inference_pool.is_alive()

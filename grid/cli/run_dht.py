@@ -93,7 +93,7 @@ def main():
     )
     log_visible_maddrs(dht.get_visible_maddrs(), only_p2p=args.use_ipfs)
 
-    reachability_protocol = ReachabilityProtocol.attach_to_dht(dht, await_ready=True)
+    ReachabilityProtocol.attach_to_dht(dht, await_ready=True)
 
     while True:
         dht.run_coroutine(report_status, return_future=False)

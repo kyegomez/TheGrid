@@ -55,7 +55,7 @@ def benchmark_forward(process_idx, args):
         input_ids = torch.randint(0, model.config.vocab_size, size=(args.batch_size, args.seq_len))
 
         logger.info(f"{process_idx=} Fwd begin {input_ids.shape=}")
-        h = model(input_ids)
+        model(input_ids)
         # We don't use model.lm_head
         logger.info(f"{process_idx=} Fwd end")
 

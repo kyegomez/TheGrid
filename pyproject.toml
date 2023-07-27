@@ -2,7 +2,7 @@
 name = "the-grid"
 version = "0.1.0"
 description = "Easy way to efficiently run 100B+ language models without high-end GPUs"
-authors = ["Grid Developers <https://discord.gg/qUtxnK2NMf>"]
+authors = ["Grid Developers <kye@apac.ai>"]
 homepage = "https://github.com/kyegomez/thegrid"
 license = "MIT"
 
@@ -39,11 +39,8 @@ black = "==22.3.0"
 isort = "==5.10.1"
 psutil = "*"
 
-[
-tool.poetry.packages
-]
-name = "grid"
-path = "grid/"
+[[tool.poetry.packages]]
+include = "grid/**/*"
 
 [tool.black]
 line-length = 120

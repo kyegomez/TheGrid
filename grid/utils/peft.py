@@ -119,7 +119,7 @@ def load_peft(
                     cache_dir=cache_dir,
                     local_files_only=False,
                 )
-        except Exception as e:
+        except Exception:
             logger.warning(
                 f"Failed to load peft weights {repo_id} from HF Hub (retry in {delay:.0f} sec)", exc_info=True
             )

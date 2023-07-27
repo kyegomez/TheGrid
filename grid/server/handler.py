@@ -215,7 +215,7 @@ class TransformerConnectionHandler(ConnectionHandler):
                             pass  # user passed a tensor with 0 tokens. This is a special case that occurs, e.g.
                             # when user wants to pre-allocate cache or check that server *can* allocate that cache
                         else:
-                            assert hidden_states.ndim == 3, f"hidden states must be a single 3d tensor"
+                            assert hidden_states.ndim == 3, "hidden states must be a single 3d tensor"
                             (hidden_states,) = await self.module_backends[requested_uids[0]].inference_pool.submit_task(
                                 hidden_states, hypo_ids, inference_infos, *prompts, priority=priority
                             )
@@ -309,7 +309,7 @@ class TransformerConnectionHandler(ConnectionHandler):
                     pushed = metadata.get("pushed")
                     if pushed:
                         n_pushes += 1
-                        self._log_request("rpc_inference.push", requested_uids, context, debug=f"session received push")
+                        self._log_request("rpc_inference.push", requested_uids, context, debug="session received push")
 
                     if step_id is None or step_id not in processed_step_ids:
                         yield request, metadata
@@ -462,7 +462,7 @@ class TransformerConnectionHandler(ConnectionHandler):
             assert isinstance(metadata["output_compression"], (list, tuple)), "output_compression must be a tuple/list"
             output_compression = tuple(metadata["output_compression"])
             assert all(isinstance(c, int) for c in output_compression), "output_compression must contain integers"
-            assert len(output_compression) == 1, f"output_compression tuple should have 1 element"
+            assert len(output_compression) == 1, "output_compression tuple should have 1 element"
         else:
             output_compression = tuple(tensor.compression for tensor in outputs_schema)
 

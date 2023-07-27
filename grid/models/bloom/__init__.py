@@ -1,4 +1,3 @@
-from grid.models.bloom.block import WrappedBloomBlock
 from grid.models.bloom.config import DistributedBloomConfig
 from grid.models.bloom.model import (
     DistributedBloomForCausalLM,

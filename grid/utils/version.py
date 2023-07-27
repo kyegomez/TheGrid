@@ -26,7 +26,7 @@ def validate_version() -> None:
                 f"A newer version {latest} is available. Please upgrade with: "
                 f"{TextStyle.BOLD}pip install --upgrade grid{TextStyle.RESET}"
             )
-    except Exception as e:
+    except Exception:
         logger.warning("Failed to fetch the latest Grid version from PyPI:", exc_info=True)
 
 

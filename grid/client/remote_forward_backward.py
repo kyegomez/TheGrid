@@ -92,7 +92,7 @@ async def run_remote_forward(
     forward_schema_with_prompts = (tuple(args_schema * len(inputs)), kwargs_schema)
 
     if not nested_compare(forward_inputs, forward_schema_with_prompts):
-        raise TypeError(f"Inputs do not match expert input schema. Did you pass the right number of parameters?")
+        raise TypeError("Inputs do not match expert input schema. Did you pass the right number of parameters?")
 
     forward_inputs = nested_flatten(forward_inputs)
     inputs = tuple(tensor.cpu().detach() for tensor in forward_inputs)

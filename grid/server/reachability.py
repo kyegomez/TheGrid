@@ -99,7 +99,7 @@ class ReachabilityProtocol(ServicerBase):
             response = await self.get_stub(self.probe, remote_peer).rpc_check(request, timeout=timeout)
             logger.debug(f"call_check(remote_peer={remote_peer}, check_peer={check_peer}) -> {response.available}")
             return response.available
-        except Exception as e:
+        except Exception:
             logger.debug(f"Requested {remote_peer} to check {check_peer}, but got:", exc_info=True)
             return None
 

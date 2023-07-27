@@ -172,6 +172,6 @@ def _load_state_dict_from_file(
                 if path is None:
                     raise RuntimeError(f"File {filename} does not exist in repo {model_name}")
                 return torch.load(path, map_location="cpu")
-        except Exception as e:
+        except Exception:
             logger.warning(f"Failed to load file {filename} from HF Hub (retry in {delay:.0f} sec)", exc_info=True)
             time.sleep(delay)
