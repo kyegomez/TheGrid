@@ -1,6 +1,6 @@
 <div align="center">
     <!-- <img src="https://i.imgur.com/7eR7Pan.png" width="400"><br> -->
-    # The Grid: Democratizing Superintelligence<br>
+    <h1> The Grid: Democratizing Superintelligence</div>
     Fine-tuning and inference <a href="https://github.com/kyegomez/thegrid#benchmarks">up to 10x faster</a> than offloading<br><br>
     <a href="https://pypi.org/project/grid/"><img src="https://img.shields.io/pypi/v/grid.svg?color=green"></a><br>
 </div>
